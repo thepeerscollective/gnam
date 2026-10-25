@@ -42,11 +42,11 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 /* ===== NAV: rail + comanda tickets ===== */
 .nav { position: fixed; inset: 0 0 auto 0; z-index: 50; pointer-events: none; transition: transform .3s ease; }
 .nav.is-hidden { transform: translateY(-140px); }
-.nav__rail { position: absolute; top: 96px; left: 0; right: 0; height: 12px; background: var(--inchiostro); transition: top .25s ease; }
-.nav__lang { position: absolute; top: 40px; right: clamp(20px, 6.9vw, 100px); pointer-events: auto; display: flex; gap: 6px; font: 700 15px var(--f-sans); }
+.nav__rail { position: absolute; top: 56px; left: 0; right: 0; height: 12px; background: var(--inchiostro); transition: top .25s ease; }
+.nav__lang { position: absolute; top: 16px; right: clamp(20px, 6.9vw, 100px); pointer-events: auto; display: flex; gap: 6px; font: 700 15px var(--f-sans); }
 .nav__lang button[aria-pressed='false'] { opacity: 0.5; }
 .nav__logo { display: none; }
-.tickets { position: absolute; top: 104px; left: var(--g); display: flex; gap: clamp(40px, 6.9vw, 100px); transition: top .25s ease; }
+.tickets { position: absolute; top: 64px; left: var(--g); display: flex; gap: clamp(40px, 6.9vw, 100px); transition: top .25s ease; }
 .nav.is-scrolled .nav__rail { top: 0; height: 8px; }
 .nav.is-scrolled .tickets { top: 8px; }
 .nav.is-scrolled .nav__lang { top: 18px; right: 30px; background: var(--carta); color: var(--inchiostro); padding: 6px 10px; border: 1px solid var(--inchiostro); }
@@ -93,13 +93,13 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 /* ===== sections (home) ===== */
 section { position: relative; }
-.hero { min-height: 1000px; height: 100vh; max-height: 1100px; background: var(--carta); overflow: hidden; }
-.hero__gnam { position: absolute; left: 52px; bottom: 100px; font-size: clamp(118px, 20.8vw, 300px); color: var(--pomodoro); }
-.hero__plate { position: absolute; right: 70px; bottom: 140px; width: clamp(220px, 23.6vw, 340px); aspect-ratio: 1; }
+.hero { min-height: 640px; height: 100vh; max-height: 1000px; background: var(--carta); overflow: hidden; }
+.hero__gnam { position: absolute; left: 52px; bottom: 80px; font-size: min(20.8vw, 30vh, 300px); color: var(--pomodoro); }
+.hero__plate { position: absolute; right: 70px; bottom: 120px; width: min(23.6vw, 32vh, 340px); aspect-ratio: 1; }
 .hero__plate img { width: 100%; height: 100%; object-fit: contain; }
-.hero__cap { position: absolute; right: 70px; bottom: 96px; color: var(--pomodoro); font-size: 34px; }
-.hero__sub { position: absolute; left: 64px; bottom: 44px; }
-.hero__scroll { position: absolute; right: 120px; bottom: 44px; opacity: 0.6; }
+.hero__cap { position: absolute; right: 70px; bottom: 76px; color: var(--pomodoro); font-size: 30px; }
+.hero__sub { position: absolute; left: 64px; bottom: 34px; }
+.hero__scroll { position: absolute; right: 120px; bottom: 34px; opacity: 0.6; }
 
 .receipt-sec { background: var(--pomodoro); color: var(--carta); padding: 60px var(--g) 100px 80px; display: grid; grid-template-columns: 1fr 440px; gap: 40px; align-items: start; }
 .receipt-sec__words { position: relative; }
@@ -116,9 +116,9 @@ section { position: relative; }
 .polaroid--1 { width: 180px; right: -40px; top: 60px; transform: rotate(-6deg); }
 .polaroid--2 { width: 170px; right: 0; top: 520px; transform: rotate(5deg); }
 
-.table { min-height: 1000px; background: #c43b2b url('/img/texture-tablecloth.webp') center/cover; padding: 60px var(--g); }
+.table { background: #c43b2b url('/img/texture-tablecloth.webp') center/cover; padding: 60px var(--g); }
 .table__label { background: var(--carta); display: inline-block; padding: 4px 8px; }
-.plates { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-top: 80px; }
+.plates { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-top: 50px; padding-bottom: 20px; }
 .plate { display: block; text-align: left; color: var(--inchiostro); }
 .plate:nth-child(even) { margin-top: 120px; }
 .plate__img { width: 100%; max-width: 260px; aspect-ratio: 1; transition: transform 0.3s ease, opacity 0.3s ease; }
@@ -206,8 +206,8 @@ section { position: relative; }
 .footer__legal { display: flex; flex-wrap: wrap; gap: 8px 40px; margin-top: 20px; }
 
 /* ===== menu page ===== */
-.menu { min-height: 100vh; background: var(--c); color: var(--ink); transition: background .3s, color .3s; display: grid; grid-template-columns: 500px 1fr; gap: 60px; padding: 220px var(--g) 80px 60px; }
-.menu__list { position: sticky; top: 220px; align-self: start; }
+.menu { min-height: 100vh; background: var(--c); color: var(--ink); transition: background .3s, color .3s; display: grid; grid-template-columns: 500px 1fr; gap: 60px; padding: 90px var(--g) 80px 60px; }
+.menu__list { position: sticky; top: 90px; align-self: start; }
 .menu__course { display: flex; align-items: baseline; gap: 26px; margin-bottom: 20px; opacity: .35; }
 .menu__course[aria-selected='true'] { opacity: 1; }
 .menu__course .black { font-size: clamp(36px, 7.2vw, 104px); }
@@ -234,7 +234,7 @@ section { position: relative; }
 /* ===== prenota ===== */
 .prenota { background: var(--pomodoro); min-height: 100vh; padding: 130px var(--g) 80px; }
 .prenota__grid { display: grid; grid-template-columns: 1fr 560px; gap: 60px; align-items: start; }
-.dispenser { display: block; width: 420px; max-width: 100%; position: relative; margin-top: 40px; }
+.dispenser { display: block; width: 210px; max-width: 100%; position: relative; margin-top: 16px; }
 .dispenser img { width: 100%; }
 .dispenser__ticket { position: absolute; right: -60px; bottom: 20px; background: var(--carta); padding: 14px 20px; transform: rotate(4deg); transition: transform .4s cubic-bezier(.3,1.6,.5,1); }
 .dispenser.is-pulled .dispenser__ticket { transform: rotate(8deg) translateY(40px); }
@@ -402,7 +402,7 @@ section { position: relative; }
   .prenota { padding: 130px 20px 60px; }
   .prenota__grid { grid-template-columns: 1fr; gap: 30px; }
   .dispenser { width: 150px; margin-top: 20px; }
-  .dispenser__ticket { right: -170px; bottom: 30px; }
+  .dispenser__ticket { right: -100px; bottom: 30px; }
   .form { padding: 20px; }
   .row2 { grid-template-columns: 1fr; gap: 0; }
   .orders__grid { grid-template-columns: 1fr; gap: 16px; }
