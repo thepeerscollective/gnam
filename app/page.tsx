@@ -198,7 +198,7 @@ export default function Home() {
           <Link className="button" href="/la-storia">{t('storia.link')}</Link>
         </div>
         <div className="storia__lines">
-          {(['storia.1974', 'storia.1998', 'storia.2019', 'storia.2026'] as const).map((k) => <p key={k} className="mono">{t(k)}</p>)}
+          {(['storia.1974', 'storia.1998', 'storia.2019', 'storia.2027'] as const).map((k) => <p key={k} className="mono">{t(k)}</p>)}
         </div>
         <div className="team">
           {team.map((m) => (

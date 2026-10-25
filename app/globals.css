@@ -14,8 +14,8 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { -webkit-text-size-adjust: 100%; }
-body { background: var(--carta); color: var(--inchiostro); font-family: var(--f-sans); font-weight: 500; overflow-x: hidden; }
+html { -webkit-text-size-adjust: 100%; overflow-x: clip; }
+body { background: var(--carta); color: var(--inchiostro); font-family: var(--f-sans); font-weight: 500; overflow-x: clip; }
 img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
@@ -328,7 +328,7 @@ section { position: relative; }
 
 /* ===== mobile ===== */
 @media (max-width: 767px) {
-  .hero { height: 640px; min-height: 0; }
+  .hero { height: 600px; min-height: 0; }
   .hero__plate { right: 20px; top: 120px; bottom: auto; width: 220px; }
   .hero__cap { right: 20px; top: 346px; bottom: auto; font-size: 22px; }
   .hero__gnam { left: 16px; top: 380px; bottom: auto; font-size: 104px; }
@@ -413,14 +413,15 @@ section { position: relative; }
   .pols { grid-template-columns: 1fr 1fr; gap: 20px; }
   .pols img:nth-child(n) { transform: rotate(-2deg); } .pols img:nth-child(even) { transform: rotate(2deg) translateY(24px); }
   .reviews { padding: 40px 20px 70px; }
-  .reviews__grid { grid-template-columns: 1fr 1fr; row-gap: 40px; margin-top: 40px; }
-  .rcard { padding: 14px 12px 28px; margin: 0 -4px; }
-  .rcard__head p { font-size: 9px; }
+  .reviews__grid { grid-template-columns: 1fr; row-gap: 26px; margin-top: 30px; padding: 0 10px; }
+  .rcard { padding: 16px 16px 30px; margin: 0; width: 86%; }
+  .rcard:nth-child(even) { margin-left: auto; }
+  .rcard__head p { font-size: 11px; }
   .rcard__q { font-size: 20px; }
   .stamp { position: static; display: inline-block; font-size: 16px; padding: 10px 14px; margin-top: 10px; }
-  .rcard:nth-child(n) { transform: rotate(-2deg); } .rcard:nth-child(even) { transform: rotate(2deg) translateY(30px); }
+  .rcard:nth-child(n) { transform: rotate(-2deg); } .rcard:nth-child(even) { transform: rotate(2deg); }
   .lteam { padding: 40px 20px 60px; }
-  .e404 { grid-template-columns: 1fr; padding: 80px 20px 60px; }
+  .e404 { grid-template-columns: 1fr; padding: 130px 20px 60px; }
   .e404 img { order: -1; width: 220px; margin-left: auto; }
   .privacy { padding: 130px 20px 60px; }
   .privacy dl { grid-template-columns: 1fr; gap: 8px; }

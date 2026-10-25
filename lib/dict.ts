@@ -11,7 +11,7 @@ export const D = {
   'ticket.02.sub': { pl: '6 stolików · sms w 10 min', en: '6 tavoli · sms in 10 min' },
   'ticket.02.note': same('6 tavoli, presto!'),
   'ticket.03.label': same('LA STORIA'),
-  'ticket.03.sub': same('napoli 1974 → kraków 2026'),
+  'ticket.03.sub': same('napoli 1974 → kraków 2027'),
   'ticket.03.note': same('dal 1974'),
   'ticket.04.label': same('DOVE'),
   'ticket.04.sub': same('ul. józefa 12 · mar–dom 12–22'),
@@ -54,9 +54,9 @@ export const D = {
   // table
   'table.label': { pl: '[ cosa mangiamo · wybierz talerz ]', en: '[ cosa mangiamo · pick a plate ]' },
   'table.pizza': { pl: '(>_<)ゞ niektóre gryzą', en: '(>_<)ゞ some of them bite' },
-  'table.pasta': { pl: 'wałkowana codziennie o 8', en: 'rolled every morning at 8' },
-  'table.dolci': same('(っ˘ڡ˘ς)'),
-  'table.vino': { pl: 'włoskie, naturalne, w miarę tanie', en: 'italian, natural, cheap-ish' },
+  'table.pasta': { pl: '~(˘▽˘~) wałkowana ręcznie co rano o 8, zanim marco wypije kawę', en: "~(˘▽˘~) rolled by hand every morning at 8, before marco's first coffee" },
+  'table.dolci': { pl: '(っ˘ڡ˘ς) giulia robi je co rano. tiramisù znika pierwsze', en: '(っ˘ڡ˘ς) giulia makes them every morning. the tiramisù goes first' },
+  'table.vino': { pl: '(°▽°)/ włoskie, naturalne, w miarę tanie. cin cin!', en: '(°▽°)/ italian, natural, cheap-ish. cin cin!' },
 
   // bestsellers
   'best.label': { pl: '[ i più ordinati · najczęściej zamawiane ]', en: '[ i più ordinati · most ordered ]' },
@@ -84,7 +84,7 @@ export const D = {
   'storia.1974': { pl: '1974 · nonna rosa otwiera salę na sześć stolików w neapolu', en: '1974 · nonna rosa opens a six-table room in naples' },
   'storia.1998': { pl: '1998 · jej wnuk marco przypala swoje pierwsze sto pizz', en: '1998 · her grandson marco burns his first hundred pizzas' },
   'storia.2019': { pl: '2019 · marco przeprowadza się do krakowa, z miłości', en: '2019 · marco moves to kraków, for love' },
-  'storia.2026': { pl: '2026 · gnam otwiera się na ul. józefa. znowu sześć stolików.', en: '2026 · gnam opens on ul. józefa. six tables, again.' },
+  'storia.2027': { pl: '2027 · gnam otwiera się na ul. józefa. znowu sześć stolików.', en: '2027 · gnam opens on ul. józefa. six tables, again.' },
   'team.anna': { pl: 'anna, która niczego nie mierzy i nigdy się nie myli', en: 'anna, who measures nothing and is never wrong' },
   'team.marco': { pl: 'marco, który co rano celowo przypala pierwszą pizzę', en: 'marco, who burns the first pizza every morning on purpose' },
   'team.giulia': { pl: 'giulia, tiramisù nie podlega negocjacjom', en: 'giulia, tiramisù is non-negotiable' },

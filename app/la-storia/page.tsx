@@ -3,11 +3,11 @@ import { useLang } from '@/lib/i18n';
 import Footer from '@/components/Footer';
 
 const REVIEWS = [
-  { q: 'the carbonara made me call my mum.', a: 'anna, kraków', t: '2', d: '14.03.2026', items: [['1× carbonara', '42,00'], ['1× rosso casa', '22,00'], ['1× tiramisù', '22,00']], tot: '86,00' },
-  { q: "i came for the pizza, stayed for tomek's 'mamma mia'.", a: 'piotr, google', t: '5', d: '02.04.2026', items: [['2× margherita', '64,00'], ['1× diavola', '38,00'], ['3× birra', '45,00']], tot: '147,00' },
-  { q: 'six tables. book. seriously.', a: 'the list, 2026', t: '1', d: '19.04.2026', items: [["1× ragù di nonna", '44,00'], ['1× chianti (b)', '140,00']], tot: '184,00' },
-  { q: 'tiramisù is a religion here.', a: "giulia's fan club", t: '3', d: '27.04.2026', items: [['4× tiramisù', '88,00'], ['2× affogato', '32,00']], tot: '120,00' },
-  { q: 'best 42 zł i spent this year.', a: 'michał, instagram', t: '6', d: '08.05.2026', items: [['1× carbonara', '42,00']], tot: '42,00' },
+  { q: 'the carbonara made me call my mum.', a: 'anna, kraków', t: '2', d: '14.03.2027', items: [['1× carbonara', '42,00'], ['1× rosso casa', '22,00'], ['1× tiramisù', '22,00']], tot: '86,00' },
+  { q: "i came for the pizza, stayed for tomek's 'mamma mia'.", a: 'piotr, google', t: '5', d: '02.04.2027', items: [['2× margherita', '64,00'], ['1× diavola', '38,00'], ['3× birra', '45,00']], tot: '147,00' },
+  { q: 'six tables. book. seriously.', a: 'the list, 2027', t: '1', d: '19.04.2027', items: [["1× ragù di nonna", '44,00'], ['1× chianti (b)', '140,00']], tot: '184,00' },
+  { q: 'tiramisù is a religion here.', a: "giulia's fan club", t: '3', d: '27.04.2027', items: [['4× tiramisù', '88,00'], ['2× affogato', '32,00']], tot: '120,00' },
+  { q: 'best 42 zł i spent this year.', a: 'michał, instagram', t: '6', d: '08.05.2027', items: [['1× carbonara', '42,00']], tot: '42,00' },
 ];
 
 export default function Storia() {
@@ -28,13 +28,13 @@ export default function Storia() {
             <div className="pols">
             <img src="/img/polaroid-01-napoli.webp" alt="napoli, 1974 · nonna rosa" />
             <img src="/img/polaroid-02-marco.webp" alt="marco, 1998" />
-            <img src="/img/polaroid-03-sign.webp" alt="ul. józefa, 2026" loading="lazy" />
+            <img src="/img/polaroid-03-sign.webp" alt="ul. józefa, 2027" loading="lazy" />
             <img src="/img/polaroid-04-staff.webp" alt="lunedì sera, staff dinner" loading="lazy" />
             <img src="/img/polaroid-05-book.webp" alt="il libro, 1974, nonna's recipe book" loading="lazy" />
           </div>
           </div>
           <div className="lstoria__time">
-            {(['storia.1974', 'storia.1998', 'storia.2019', 'storia.2026'] as const).map((k) => <p key={k} className="mono">{t(k)}</p>)}
+            {(['storia.1974', 'storia.1998', 'storia.2019', 'storia.2027'] as const).map((k) => <p key={k} className="mono">{t(k)}</p>)}
           </div>
         </div>
         
