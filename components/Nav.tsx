@@ -9,7 +9,7 @@ const TICKETS = [
   { n: '01', href: '/menu', h: 250 },
   { n: '02', href: '/prenota', h: 310 },
   { n: '03', href: '/la-storia', h: 270 },
-  { n: '04', href: '/#dove', h: 330 },
+  { n: '04', href: '/#dove', h: 230 },
 ] as const;
 
 const BG: Record<string, string> = { '/menu': 'transparent', '/prenota': 'var(--pomodoro)' };

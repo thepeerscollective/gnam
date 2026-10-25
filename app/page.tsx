@@ -33,9 +33,9 @@ function StopMotion({ alt }: { alt: string }) {
     const step = () => {
       i = (i + 1) % FRAMES.length;
       setF(i);
-      timer = setTimeout(step, i === FRAMES.length - 1 ? 1500 : i === 0 ? 900 : 400);
+      timer = setTimeout(step, i === FRAMES.length - 1 ? 750 : i === 0 ? 450 : 200);
     };
-    timer = setTimeout(step, 900);
+    timer = setTimeout(step, 450);
     return () => clearTimeout(timer);
   }, [reduce]);
   return <img src={FRAMES[f]} alt={alt} width={340} height={340} />;
