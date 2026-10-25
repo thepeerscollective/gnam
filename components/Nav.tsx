@@ -18,8 +18,17 @@ export default function Nav() {
   const { t, lang, setLang } = useLang();
   const path = usePathname();
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
   useEffect(() => {
-    const on = () => setScrolled(window.scrollY > 80);
+    let last = window.scrollY;
+    const on = () => {
+      const y = window.scrollY;
+      setScrolled(y > 80);
+      // hide while scrolling down, come back when scrolling up
+      if (y > 160 && y > last + 4) setHidden(true);
+      else if (y < last - 4 || y < 160) setHidden(false);
+      last = y;
+    };
     on();
     window.addEventListener('scroll', on, { passive: true });
     return () => window.removeEventListener('scroll', on);
@@ -28,7 +37,7 @@ export default function Nav() {
   const compact = scrolled || path !== '/';
   if (path === '/menu') return null; // the menu has its own course tabs + header
   return (
-    <nav className={`nav ${compact ? 'is-scrolled' : ''}`} aria-label="GNAM" style={{ ['--nav-bg' as string]: BG[path] ?? 'var(--carta)' }}>
+    <nav className={`nav ${compact ? 'is-scrolled' : ''} ${hidden ? 'is-hidden' : ''}`} onFocus={() => setHidden(false)} aria-label="GNAM" style={{ ['--nav-bg' as string]: BG[path] ?? 'var(--carta)' }}>
       <div className="nav__rail" aria-hidden />
       <Link href="/" className="nav__logo">GNAM</Link>
       <div className="nav__lang" role="group" aria-label={t('lang.aria')}>

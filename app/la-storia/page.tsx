@@ -25,18 +25,19 @@ export default function Storia() {
           <div>
             <h1 className="black statement" id="ls">LA STORIA</h1>
             <p className="caption" style={{ marginTop: 10 }}>{t('storiaPage.sub')}</p>
+            <div className="pols">
+            <img src="/img/polaroid-01-napoli.webp" alt="napoli, 1974 · nonna rosa" />
+            <img src="/img/polaroid-02-marco.webp" alt="marco, 1998" />
+            <img src="/img/polaroid-03-sign.webp" alt="ul. józefa, 2026" loading="lazy" />
+            <img src="/img/polaroid-04-staff.webp" alt="lunedì sera, staff dinner" loading="lazy" />
+            <img src="/img/polaroid-05-book.webp" alt="il libro, 1974, nonna's recipe book" loading="lazy" />
           </div>
-          <div style={{ display: 'grid', gap: 14, alignContent: 'start' }}>
+          </div>
+          <div className="lstoria__time">
             {(['storia.1974', 'storia.1998', 'storia.2019', 'storia.2026'] as const).map((k) => <p key={k} className="mono">{t(k)}</p>)}
           </div>
         </div>
-        <div className="pols">
-          <img src="/img/polaroid-01-napoli.webp" alt="napoli, 1974 · nonna rosa" />
-          <img src="/img/polaroid-02-marco.webp" alt="marco, 1998" />
-          <img src="/img/polaroid-03-sign.webp" alt="ul. józefa, 2026" loading="lazy" />
-          <img src="/img/polaroid-04-staff.webp" alt="lunedì sera, staff dinner" loading="lazy" />
-          <img src="/img/polaroid-05-book.webp" alt="il libro, 1974, nonna's recipe book" loading="lazy" />
-        </div>
+        
       </section>
       <section className="reviews on-dark" aria-labelledby="rv">
         <div className="reviews__head">
